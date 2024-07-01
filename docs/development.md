@@ -11,7 +11,7 @@
 Make sure you have the following installed:
 
 - [Node](https://nodejs.org/en/)
-- [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/) (at least 1.0)
+- [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/)
 
 ## Installation
 
@@ -22,16 +22,17 @@ npm install
 
 ### Database
 
-> Note: Awesome NestJS Boilerplate uses [TypeORM](https://github.com/typeorm/typeorm) with Data Mapper pattern.
+Setup MongoDb, no need to create a database or collection, just provide database name to automatically create
 
 ### Configuration
 
-Before start install PostgreSQL and fill correct configurations in `.env` file
+Before start create fill correct configurations for `.env` file
 
 ```env
-DB_HOST=localhost
-DB_PORT=5432
-DB_USERNAME=postgres
-DB_PASSWORD=postgres
-DB_DATABASE=nest_boilerplate
+OPENAI_API_KEY=<Your OeanAI API Key>
+MONGODB_URL=<Your Mongo database URL>
+MONGODB_DATABASE=<Your Mongo database name>
+PRODUCTS_CSV_FILE_URL=<optional: url that downloads csv file>
+PERFORM_DELETION=<optional: true to perform deletion, anything else doesn't>
+
 ```
