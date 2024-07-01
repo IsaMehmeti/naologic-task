@@ -5,6 +5,7 @@
   - [Installation](#installation)
     - [Database](#database)
     - [Configuration](#configuration)
+  - [Start App](#start-app)
 
 ## First-time setup
 
@@ -36,3 +37,9 @@ PRODUCTS_CSV_FILE_URL=<optional: url that downloads csv file>
 PERFORM_DELETION=<optional: true to perform deletion, anything else doesn't>
 
 ```
+## Start App
+
+```bash
+npm run start
+```
+
