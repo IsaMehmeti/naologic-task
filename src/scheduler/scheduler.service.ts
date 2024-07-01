@@ -1,4 +1,3 @@
-import { Injectable } from "@nestjs/common";
 import { Cron, CronExpression } from "@nestjs/schedule";
 import { join } from "path";
 import { ProductsService } from "src/products/products.service";
@@ -21,7 +20,7 @@ export class SchedulerService {
      * This method calls the `processCSV` method of the `ProductsService` to process the data.
      * 
      */
-    // @Cron(CronExpression.EVERY_5_SECONDS)
+    @Cron(CronExpression.EVERY_DAY_AT_1AM)
     async handleDailyImport() {
         const filePath = process.env.PRODUCTS_CSV_FILE_URL || join(__dirname, '../../data/products.csv');
         const performDeletion = process.env.PERFORM_DELETION === 'true' ? true : false;
